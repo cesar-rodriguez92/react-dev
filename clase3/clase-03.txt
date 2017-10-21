@@ -1,0 +1,12 @@
+************** Clase 03 **************
+------ > Redux < ------
+
+Se puede hacer debug de redux con Redux DevTools
+
+1. se crea aplicacion con: create-react-app app03
+2. se instala react y redux:
+    npm install --save redux
+    npm install --save react-redux
+3. Luego crear store
+    se importa de redux: import {Store} from 'redux'
+    
