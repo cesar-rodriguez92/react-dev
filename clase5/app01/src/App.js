@@ -5,7 +5,6 @@ const App = () =>(
   <div>
     <Form onSubmit={(data) =>
       console.log(data)} />
-
   </div>
 );
 
