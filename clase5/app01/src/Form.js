@@ -19,6 +19,7 @@ const ContactForm = (props) =>{
       <Field name='name' component={renderField} type='text'  label='Nombre'/>
       <Field name='email' component={renderField} type='email'label='Correo Electronico' />
       <Field name='edad' component={renderField} type='number'label='Edad' normalize = {validarEdad('edad')}  />
+      
       <button
         type='submit'>Enviar</button>
     </form>
