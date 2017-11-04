@@ -11,6 +11,20 @@ const validateForm = (values) =>{
   return errores;
 }
 */
+const sleep = ms =>
+  new Promise(resolve => setTimeout
+    (resolve, ms));
+
+const asyncValidateForm = (values) => {
+  return sleep(70)
+  .then(() => {
+    if(values.email === 'correo@test.com'){
+      throw {email: 'Validacion BackEnd: Correo no disponible'};
+    }
+  }
+
+  )
+}
 
 const renderField = (props) => {
   const {type, input, label, meta} = props;
@@ -62,4 +76,6 @@ export default reduxForm({
   initialValues : { edad: 0,
                     promedioFinal: 0 },
   //validate : validateForm
+  asyncValidate: asyncValidateForm,
+  asyncBlurFields: ['email']
 })(ContactForm);
